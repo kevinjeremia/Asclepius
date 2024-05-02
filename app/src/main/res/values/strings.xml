@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Asclepius</string>
+    <string name="camera_x">CameraX</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="analyze">Analyze</string>
+    <string name="result">Skin Analysis Result</string>
+    <string name="menu_title_scans_history">Scans History</string>
+    <string name="content_desc_scans_history">User\'s scans history</string>
+    <string name="botnav_title_home">Home</string>
+    <string name="botnav_title_examine">Examine</string>
+    <string name="botnav_title_articles">Articles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_greetings">Good morning!</string>
+    <string name="tv_title_cta">Have you checked\nyour skin today?</string>
+    <string name="desc_girl_illustration">Illustration of a girl with melanoma</string>
+    <string name="tv_subtitle_cta">Early detection saves lives.</string>
+    <string name="cta_examine">Examine your skin</string>
+    <string name="tv_recent_scans">Recent Scans</string>
+    <string name="tv_all_results">All Results</string>
+    <string name="tv_recentscans_title">Skin Analysis Result</string>
+    <string name="tv_scansresult_subtitle">Non-Cancer with 100% confidence</string>
+    <string name="recent_scans_photo">Recent scans photo</string>
+    <string name="tv_highlights">Highlights</string>
+    <string name="tv_more_articles">More Articles</string>
+    <string name="tv_title_articles_header">Articles On Cancer</string>
+    <string name="recent_scans_date">Wed, December 10 2020 at 22:59 PM</string>
+    <string name="articles_title">How Neuroscience News</string>
+    <string name="articles_subtitle">The Southern Health Trust says the move is not out of concern but to provide extra assurance.</string>
+    <string name="examine_title">Please take a picture of your skin</string>
+    <string name="image_progress_title">Image</string>
+    <string name="result_progress_title">Result</string>
+    <string name="nav_desc">Close screen</string>
+    <string name="examine_again">Examine Again</string>
+    <string name="scans_history">Scans History</string>
+    <string name="history_empty">Your scans history is empty.\nYou haven\'t scanned your skin yet.</string>
+    <string name="image_classifier_failed">Cancer classification failed to initialize.</string>
+</resources>
