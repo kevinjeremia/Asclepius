@@ -10,8 +10,6 @@ import java.util.Locale
 
 class ResultViewModel(private val scansRepo: ScansRepository) : ViewModel() {
 
-    private var size = 0
-
     fun getCurrentTime(): String {
         val currentDate = Date()
         val dateFormat = SimpleDateFormat("EEE, MMM d yyyy 'at' K:mm a", Locale.getDefault())
@@ -19,7 +17,6 @@ class ResultViewModel(private val scansRepo: ScansRepository) : ViewModel() {
     }
 
     fun insertScan(img: String, diagnosis: String, date: String) {
-        size += 1
         viewModelScope.launch {
             scansRepo.insert(img, diagnosis, date)
         }

@@ -37,9 +37,6 @@ class ExamineFragment : Fragment() {
 
     private var currentImageUri: Uri? = null
 
-    private val timeStamp: String = SimpleDateFormat(FILENAME_FORMAT, Locale.US).format(Date())
-
-
     private val requestPermissionLauncher =
         registerForActivityResult(
             ActivityResultContracts.RequestPermission()
@@ -153,7 +150,7 @@ class ExamineFragment : Fragment() {
     }
 
     private fun startCropActivity(uri: Uri) {
-        val destinationUri = Uri.fromFile(File(requireContext().cacheDir, "cropped${timeStamp}"))
+        val destinationUri = Uri.fromFile(File(requireContext().cacheDir, "cropped.${Date()}"))
         val options = UCrop.Options()
         options.setCompressionFormat(Bitmap.CompressFormat.JPEG)
 
@@ -227,6 +224,5 @@ class ExamineFragment : Fragment() {
 
     companion object {
         private const val REQUIRED_PERMISSION = Manifest.permission.CAMERA
-        private const val FILENAME_FORMAT = "yyyyMMdd_HHmmss"
     }
 }

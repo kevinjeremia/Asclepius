@@ -13,10 +13,6 @@ class HistoryViewModel(private val scansRepo: ScansRepository) : ViewModel() {
     private var _size = MutableLiveData(0)
     val size: LiveData<Int> = _size
 
-    init {
-//        getScansHistory()
-    }
-
     private fun getDbSize() {
         viewModelScope.launch {
             _size.value = scansRepo.size()
