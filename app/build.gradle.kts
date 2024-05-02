@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -17,8 +20,15 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        buildConfigField("String", "BASE_URL", "\"https://newsapi.org/\"")
-        buildConfigField("String", "API_KEY", "\"2fdbc5eb602d4a5593a832c8a027c6c6\"")
+        fun getKey(key: String): Any?{
+            val keysFile = project.rootProject.file("local.properties")
+            val properties = Properties()
+            properties.load(FileInputStream(keysFile))
+            return properties[key]
+        }
+
+        buildConfigField("String", "BASE_URL", "\"${getKey("BASE_URL")}\"")
+        buildConfigField("String", "API_KEY", "\"${getKey("API_KEY")}\"")
 
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
