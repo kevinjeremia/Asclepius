@@ -24,10 +24,10 @@ API_KEY = YOUR_API_KEY
 * [Navigation][3] A framework for navigating between 'destinations' within an Android application that provides a consistent API whether destinations are implemented as Fragments, Activities, or other components.
 * [CircleImageView][4] A fast circular ImageView perfect for profile images by hdodenhof.
 * [Glide][5] A fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
-* [Recyclerview] [6] An API under Jetpack library that displays large sets of data in your UI while minimizing memory usage.
-* [Retrofit] [7] A library that makes it easier to consume RESTful web services by providing a simple and efficient way to handle HTTP requests and responses.
-* [Room] [8] A library that provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite.
-* [uCrop] [9] A convenient open-source image cropping library for Android that includes basic image editing features like cropping, rotating, compressing, and scaling.
+* [Recyclerview][6] An API under Jetpack library that displays large sets of data in your UI while minimizing memory usage.
+* [Retrofit][7] A library that makes it easier to consume RESTful web services by providing a simple and efficient way to handle HTTP requests and responses.
+* [Room][8] A library that provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite.
+* [uCrop][9] A convenient open-source image cropping library for Android that includes basic image editing features like cropping, rotating, compressing, and scaling.
 
 [0]:  https://newsapi.org/
 [1]:  https://www.tensorflow.org/lite/android
