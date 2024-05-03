@@ -4,13 +4,14 @@
 Asclepius is a skin cancer detection app, implemented with pre-trained TensorFlow Lite machine learning models for efficient on-device skin cancer detection.
 
 **Download the APK from below**
+\
 [![Asclepius](https://img.shields.io/badge/Download-Asclepius-<COLOR>.svg?style=for-the-badge&logo=android)](https://github.com/kevinjeremia/Asclepius/raw/master/assets-github/Asclepius.apk)
 
 
 ## Build on your environment :hammer:
 - Add **https://newsapi.org/** as BASE_URL to **local.properties** file.
 - Add your NewsAPI API key to **local.properties** file. If you don't have have the API Key yet, get it from [newsapi.org](https://newsapi.org/)
-- ```xml
+``` xml
 BASE_URL = https://newsapi.org/
 API_KEY = YOUR_API_KEY
 ```
