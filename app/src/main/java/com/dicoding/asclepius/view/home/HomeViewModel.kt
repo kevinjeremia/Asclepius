@@ -25,7 +25,6 @@ class HomeViewModel(private val scansRepo: ScansRepository) : ViewModel() {
 
     init {
         fetchNews()
-        getRecentScans()
     }
 
     private fun getDbSize() {
