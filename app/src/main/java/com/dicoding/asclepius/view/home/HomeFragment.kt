@@ -1,6 +1,7 @@
 package com.dicoding.asclepius.view.home
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -46,6 +47,7 @@ class HomeFragment : Fragment() {
         setupArticlesRecyclerView()
         concatAdapter = ConcatAdapter(homeHeaderAdapter, articlesAdapter)
         setupWholeRecyclerView()
+        homeViewModel.getRecentScans()
 
         homeViewModel.news.observe(viewLifecycleOwner) { items ->
             concatAdapter.removeAdapter(articlesAdapter)
@@ -55,14 +57,7 @@ class HomeFragment : Fragment() {
         }
 
         homeViewModel.getRecentScans().observe(viewLifecycleOwner) { recent ->
-            if ((homeViewModel.size.value ?: 0) > 0) {
-                concatAdapter.removeAdapter(homeHeaderAdapter)
-                concatAdapter.removeAdapter(articlesAdapter)
-                setupHeaderRecyclerView(true, recent)
-                concatAdapter.addAdapter(homeHeaderAdapter)
-                concatAdapter.addAdapter(articlesAdapter)
-                concatAdapter.notifyDataSetChanged()
-            }
+            reloadAdapterWhenRecentScanExist(recent)
         }
 
     }
@@ -70,6 +65,17 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun reloadAdapterWhenRecentScanExist(recent: ScansEntity? = null) {
+        if ((homeViewModel.size.value ?: 0) > 0) {
+            concatAdapter.removeAdapter(homeHeaderAdapter)
+            concatAdapter.removeAdapter(articlesAdapter)
+            setupHeaderRecyclerView(true, recent)
+            concatAdapter.addAdapter(homeHeaderAdapter)
+            concatAdapter.addAdapter(articlesAdapter)
+            concatAdapter.notifyDataSetChanged()
+        }
     }
 
     private fun setupHeaderRecyclerView(anyRecent: Boolean = false, scansEntity: ScansEntity? = null) {
